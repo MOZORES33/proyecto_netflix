@@ -1,0 +1,217 @@
+
+body{
+    display: flex;      /* ACOMODAR*/
+    flex-direction: column; /* ACOMODAR EN TIPO DE COLUMNAS*/
+    min-height: 100%;   /*establece la altura mínima de un elemento*/
+    color: #f2f2f2;
+    background-color: #221f1f;
+    font-family: sans-serif;
+    letter-spacing: 0.03em; /* espacio entre letras*/
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+    font-style: italic;
+    background: red; /* aqui cambiamos el resaltado del titulo*/
+    color: black;  /* color de letras*/
+}
+h2, h3{
+    text-align: center;
+    font-style: italic;
+    margin-top: -200px; 
+}
+img{
+   vertical-align: middle;  /* alineacion*/
+   width: 100px;
+   height: 100px;
+   border-radius: 0px; /* redondeo de img*/
+}
+#img{  /* selector por id*/
+    vertical-align: middle;
+    max-width: 100%;    /* ancho maximo*/
+    max-height: 100%;   /* altura maxima*/
+}
+#logo{
+    border-radius: 50px;
+}
+nav{    /* navbar*/
+    background: #f2f2f2; /* color de la barra*/
+    width: 100%;    /*ancho*/
+    height: 200%; /* alto*/
+}
+
+nav ul{     /* aqui declaramos el navbar y la lista*/
+    text-align: center; /* que este todo centrado*/
+    padding-top: 1px; /*distancia*/
+}
+nav ul a{   /* aqui declaramos el navbar,la lista y el hipervinculo*/
+    text-decoration: none;  /* SIN DECORACION*/
+    color: #6e6e6e;
+   font-size: 20px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   padding: 10px  15px 14px 15px ;  /*distancia entre las listas*/
+}
+nav ul a:hover{     /* ILUMINAR AL PASAR EL MOUSE*/
+    background: red;
+    color: black;
+}
+
+.slider{    /* SLIDER DE IMAGENES*/
+    margin-top: 10px; /* DISTANCIA DEL LA PARTE DE ARRIBA*/
+    width: 100%; 
+    height: 600px;
+    overflow: hidden; /* ocultar los elementos que estan fuera del padre*/
+}
+.slider ul{
+    display: flex; /*caja flexible*/
+    animation: cambio 10s infinite alternate  linear;   /* TIPO DE ANIMACION Y EL TIEMPO QUE RECORRE LAS IMAGENES*/
+    width: 400%;
+}
+.slider li{
+    width: 100%;
+    list-style: none; /* sacamos las viñetas de las listas*/
+}
+.slider img{
+    width: 100%;
+    height: 100%;
+}
+@keyframes cambio {     /* MOVIMIENTO DEL SLIDER*/
+
+    /*@keyframes nos permite controlar los pasos intermedios en nuestra secuencia del slider. Esto nos da un control mas efectivo sobre los pasos de la secuencia animada, a diferencia de que el navegador se ocupe de todo
+validamos las listas del keyframe: para que la lista sea valida incluimos reglas para los tiempos 0% ( inicio) y 100% ( final) de la animacion.Si no especificamos los tiempos de desplazamiento la declaracion sera invalida y no habra animacion. */
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+    
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+    
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+
+.container{     /* selector por clase div cajas*/
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display:flex;   /* caja flexible*/
+    flex-wrap:wrap; /* HACEMOS QUE TODO LO QUE PONGAMOS ESTE EN LA MISMA LINEA Y CONTROLARLA*/     
+    justify-content: center;   /* HACEMOS Q EL NAVEGADOR DISTRIBUYA EL ESPACIO ENTRE EL CONTENIDO*/
+    margin: auto;
+}
+
+.container  .card{  /* CAJAS DE LOS CONTENIDOS*/
+    width: 330px;
+    height: 430px;
+    border-radius: 8px; /*EFECTO REDONDEADO*/
+    box-shadow: 0 2px   rgba(0, 0, 0, 0.2); /* EFECTO DE SOMBRA*/
+    margin: 10px;
+    text-align: center;
+    transition: all 0.25s;  /* TIEMPO EN EL Q SE MUESTRA LA EL EFECTO*/
+}
+
+.container  .card:hover{
+    transform: translateY(-15px);   /*EFECTO DE REALZAR*/
+    box-shadow:0px 12px 40px -6px red ; /*EFECTO SOMBRA*/
+}
+
+.container  .card img{
+    width: 330px;
+    height: 220px;
+}
+
+.container  .card p{
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.container  .card a{
+    font-weight: 500;
+    text-decoration: none;
+    color: #3498db;
+}
+
+
+footer{
+    margin-top:200px; 
+    position:relative; /* QUE ESTE ABAJO EL FOOTER*/
+    background: black;
+    height: 10px;
+    width: 100vw;
+    font-family: "Open Sans";
+    padding-top: 250px;
+    color: #fff;
+}
+.footer-content{
+    display: flex;
+    align-items:center;
+    justify-content: center;  /* TODO AL CENTRO*/
+    flex-direction: column;     /* ACOMODADO EN COLUMNAS*/
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;     /* TODO TEXTO INICIA EN MAYUSCULAS*/
+    line-height: 3rem;  /* La altura de línea es la distancia vertical entre dos líneas de texto*/
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    
+}
+.socials{   /*iconos*/
+    list-style: none;   /* SACAMOS LOS PUNTOS DE LA LISTA*/
+    display: flex;  /* caja flexible*/
+    align-items: center;
+    justify-content: center;    /*iconos al centro*/
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px; /*distancia entre iconos*/
+}
+.socials a{
+    text-decoration: none;  /* sin decoracion de las listas*/
+    color: white;
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+.socials a:hover i{
+    color: aqua;
+}
+.socials #fb:hover i{
+    color:blue
+}
+.socials #gl:hover i{
+    color: red;
+}
+.socials #yt:hover i{
+    color: red;
+}
+.socials #lkd:hover i{
+    color: #0077b7;
+}
+.footer-bottom{
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;  /* TODO EN MAYUSCULAS*/
+    opacity: .4;    /* transpaencia*/
+    font-weight: 900;   /* tipo negrita de la empresa*/
+}
