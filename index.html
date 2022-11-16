@@ -1,123 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/index.css">
-	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
-	<link rel="icon" href="img/icono.png"><title>Netflix</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icono.png">  <title>Login</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-	<header>
-		<div class="contenedor">
-			<h2 class="logotipo">Netflix Series 22</h2>
-			<nav>
-			
-				<a href="index.html" class="activo">Inicio</a>
-				<a href="series.html">Series</a>
-				<a href="peliculas.html">Películas</a>
-				<a href="masvistas.html">Más vistos</a>
-				<a href="login.html">Acceso</a>
-			</nav>
-		</div>
-	</header>
+    <div class="ContainerPrincipal">
+        <div class="form-group">
+                <input id="usuario" type="text" class="form-control" name="usename" placeholder="Usuario">
+                <input id="contrasena" type="password" class="form-control" name="password" placeholder="Contrasena">
+            <br>
+            <button id="boton" class="boton" onclick ="login()"> Iniciar Sesion</button>
 
-	<main>
-		<div class="pelicula-principal">
-			<div class="contenedor">
-				<h3 class="titulo">Chainsaw Man </h3>
-				<p class="descripcion">
-					La vida de pobreza de Denji cambia para siempre cuando se fusiona con su nueva mascota Pochita; una mezcla de perro y sierra mecánica. Ahora vive en la gran ciudad y es oficialmente un cazador de demonios. Sin embargo, deberá aprenderlo todo sobre su nuevo trabajo y sus nuevos superpoderes.
-				</p>
-				<a href="https://www.themoviedb.org/tv/114410/videos?active_nav_item=Trailers#play=K9Gnl0VeIVI">	<button role="button" class="boton"><i class="fas fa-play"></i>Reproducir</button></a>
-				<a href="https://www.themoviedb.org/tv/114410"><button role="button" class="boton"><i class="fas fa-info-circle"></i>Más información</button></a>
-			</div>
-		</div>
 
-		<div class="peliculas-recomendadas contenedor">
-			<div class="contenedor-titulo-controles">
-				<h3> Recomendados de esta semana</h3>
-				<div class="indicadores"></div>
-			</div>
-
-			<div class="contenedor-principal">
-				<button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
-
-				<div class="contenedor-carousel">
-					<div class="carousel">
-						<div class="pelicula">
-							<a href="https://play.hbomax.com/page/urn:hbo:page:GYGP7pwQv_ojDXAEAAAFc:type:feature"><img src="img/peliculas/interestelar.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/peliculas/wakanda.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/peliculas/terrifier2.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/peliculas/huerfana.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/peliculas/holmes.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/series/dhamer.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/series/got.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/series/greys.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/series/chainsaw.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/series/twd.jpg" alt=""></a>
-						</div>	
-					<!--	<div class="pelicula">
-							<a href="#"><img src="img/hulk.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/lucifer.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/peaky.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/rick&morty.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/dr.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/zombies.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/fall.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/blackadam.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/thor.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/topgun.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/halloween.jpg" alt=""></a>
-						</div>
-					</div>
-				</div>	-->
-
-				<button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
-			</div>
-		</div>
-	</main>
-	
-	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-	<script src="js/main.js"></script>
-
+        </div>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
