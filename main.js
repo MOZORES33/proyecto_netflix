@@ -4,7 +4,7 @@
     user = document.getElementById("usuario").value;
     password = document.getElementById("contrasena").value;
 
-    if(user === "MATIAS" && password === "MATIAS22"){
+    if(user === "PRUEBA" && password === "PRUEBA22"){
         window.location = "splash.html";
         
     } 
